@@ -1,0 +1,7 @@
+{
+    "code-runner.executorMap": {
+        "cpp": "cd $workspaceRoot && D:/mingw64/bin/g++.exe -std=c++17 -g \"$fullFileName\" src/*.cpp -I . -I include -o \"$dir$fileNameWithoutExt.exe\" && \"$dir$fileNameWithoutExt.exe\""
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true
+}
