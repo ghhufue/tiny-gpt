@@ -10,6 +10,8 @@ add_library(tiny_gpt_core
     src/dataset.cpp
     src/dataloader.cpp
     src/embedding.cpp
+    src/matrix.cpp
+    src/linear.cpp
 )
 
 target_include_directories(tiny_gpt_core PUBLIC
@@ -32,7 +34,17 @@ add_executable(test_embedding
     test/test_embedding.cpp
 )
 
+add_executable(test_matrix
+    test/test_matrix.cpp
+)
+
+add_executable(test_linear
+    test/test_linear.cpp
+)
+
 target_link_libraries(test_tokenizer PRIVATE tiny_gpt_core)
 target_link_libraries(test_dataset PRIVATE tiny_gpt_core)
 target_link_libraries(test_dataloader PRIVATE tiny_gpt_core)
 target_link_libraries(test_embedding PRIVATE tiny_gpt_core)
+target_link_libraries(test_matrix PRIVATE tiny_gpt_core)
+target_link_libraries(test_linear PRIVATE tiny_gpt_core)
