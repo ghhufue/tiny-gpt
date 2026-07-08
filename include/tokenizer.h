@@ -7,9 +7,10 @@ class Tokenizer
 {
 public:
     Tokenizer();
-    std::vector<int> encode(std::string s);
-    std::string decode(std::vector<int> token);
-    int vocab_size();
+    std::vector<int> encode(const std::string& s) const;
+    std::string decode(const std::vector<int>& token) const;
+    int vocab_size() const;
+    bool can_encode(char c) const;
 
 private:
     const std::string wordList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,!?;:'\"-_()[]{}<>/\\+=*@#$%^&|~\n\t";
